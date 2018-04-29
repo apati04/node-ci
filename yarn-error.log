@@ -2,7 +2,7 @@ Arguments:
   /usr/local/Cellar/node/9.11.1/bin/node /Users/stix/.yarn/bin/yarn.js test
 
 PATH: 
-  /Users/stix/.yarn/bin:/Users/stix/.config/yarn/global/node_modules/.bin:/Users/stix/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/stix/.yarn/bin:/Users/stix/.config/yarn/global/node_modules/.bin:/Users/stix/bin
+  /Users/stix/.yarn/bin:/Users/stix/.config/yarn/global/node_modules/.bin:/Users/stix/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 
 Yarn version: 
   1.6.0-20180327.1507
@@ -16,7 +16,7 @@ Platform:
 Trace: 
   Error: Command failed.
   Exit code: 1
-  Command: jest
+  Command: jest --forceexit
   Arguments: 
   Directory: /Users/stix/aitech/jsnode/advnode
   Output:
@@ -34,6 +34,9 @@ npm manifest:
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "jest": {
+      "setupTestFrameworkScriptFile": "./tests/setup.js"
+    },
     "scripts": {
       "start": "node index.js",
       "server": "nodemon index.js --ignore tests",
@@ -42,7 +45,7 @@ npm manifest:
       "build":
         "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
       "heroku-postbuild": "npm run build",
-      "test": "jest"
+      "test": "jest --forceexit"
     },
     "author": "",
     "license": "ISC",
