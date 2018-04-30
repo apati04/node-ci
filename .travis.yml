@@ -13,3 +13,6 @@ cache:
     - client/node_modules
 install:
   - yarn install
+  - yarn build
+script:
+  - nohub npm run start
