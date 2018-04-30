@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/9.11.1/bin/node /Users/stix/.yarn/bin/yarn.js test
+  /usr/local/Cellar/node/9.11.1/bin/node /Users/stix/.yarn/bin/yarn.js start
 
 PATH: 
   /Users/stix/.yarn/bin:/Users/stix/.config/yarn/global/node_modules/.bin:/Users/stix/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
@@ -16,7 +16,7 @@ Platform:
 Trace: 
   Error: Command failed.
   Exit code: 1
-  Command: jest --forceexit
+  Command: node index.js
   Arguments: 
   Directory: /Users/stix/aitech/jsnode/advnode
   Output:
@@ -45,7 +45,7 @@ npm manifest:
       "build":
         "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
       "heroku-postbuild": "npm run build",
-      "test": "jest --forceexit"
+      "test": "jest"
     },
     "author": "",
     "license": "ISC",
