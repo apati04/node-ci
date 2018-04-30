@@ -54,7 +54,7 @@ describe('When logged in', async () => {
     });
   });
 });
-
+// user
 describe('User is not logged in', async () => {
   test('User cannot create blog posts', async () => {
     const result = await page.evaluate(() => {
