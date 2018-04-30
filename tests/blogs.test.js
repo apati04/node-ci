@@ -64,10 +64,8 @@ describe('User is not logged in', async () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ title: 'My Title', content: 'My Content' }).then(
-          res => res.json()
-        )
-      });
+        body: JSON.stringify({ title: 'My Title', content: 'My Content' })
+      }).then(res => res.json());
     });
     expect(result).toEqual({ error: 'You must log in!' });
   });
