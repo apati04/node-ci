@@ -52,6 +52,7 @@ class BlogFormReview extends Component {
     this.setState({ file: event.target.files[0] });
   };
   render() {
+    console.log(this.state);
     return (
       <form onSubmit={this.onSubmit.bind(this)}>
         <h5>Please confirm your entries</h5>
