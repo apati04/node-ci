@@ -14,6 +14,7 @@ class BlogShow extends Component {
             'https://s3-us-west-2.amazonaws.com/ci-bucket-img-blog123/' +
             this.props.blog.imageUrl
           }
+          alt={this.props.blog.imageUrl}
         />
       );
     }
